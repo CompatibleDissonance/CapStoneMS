@@ -8,28 +8,25 @@
 <body>
     <form action="#" th:action="@{/}" th:object="${paymentForm}" method="post">
         <label>Card Number </label>
-        <input type="number"  />
+        <input type="number" name="cardNumber" value="" th:value="${this.cardNumber}" />
 
         <div></div>
 
         <label>Name on Card</label>
-        <input type="text" />
+        <input type="text" name="cardName" value="" th:value="${this.cardName}" />
 
         <div></div>
 
         <label>Card Expiry Date </label>
-        <input type="text"  />
+        <input type="text" name="expDate" value="" th:value="${this.expDate}"  />
 
         <div></div>
 
         <label>Security Code </label>
-        <input type="number"  />
+        <input type="number" name="securityCode" value="" th:value="${this.securityCode}"  />
 
         <div></div>
         <button type="submit">Submit</button>
     </form>
-
-
-
 </body>
 </html>
