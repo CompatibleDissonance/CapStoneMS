@@ -1,9 +1,6 @@
 package com.Cian.CapStoneMS.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Product {
@@ -11,13 +8,14 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private String Id;
-    private double price;
-    private String songName;
 
+    @Column(name = "product_price")
+    private double price;
+
+    private String songName;
     public String getId() { return Id; }
 
     public void setId(String id) { Id = id; }
-
 
     public double getPrice() {
         return price;
@@ -34,5 +32,6 @@ public class Product {
     public void setSongName(String songName) {
         this.songName = songName;
     }
+
 
 }

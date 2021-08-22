@@ -3,6 +3,7 @@ package com.Cian.CapStoneMS.ProductServices;
 import com.Cian.CapStoneMS.model.Product;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.Transient;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,6 +16,12 @@ public class ProductServiceImpl implements ProductService {
         Glitches.setSongName("Glitches(Instrumental)");
         Glitches.setPrice(45);
         productRepo.put(Glitches.getId(), Glitches);
+
+        Product BadMood = new Product();
+        Glitches.setId("2");
+        Glitches.setSongName("Bad Mood");
+        Glitches.setPrice(30);
+        productRepo.put(BadMood.getId(), BadMood);
     }
 
     @Override
@@ -37,5 +44,13 @@ public class ProductServiceImpl implements ProductService {
     @Override
     public Collection<Product> getProducts() {
         return productRepo.values();
+    }
+
+
+    @Override
+    public double totalPrice(Product totalDesu){
+        double zero = 0;
+        double total = (totalDesu.getPrice() + zero);
+        return total;
     }
 }
