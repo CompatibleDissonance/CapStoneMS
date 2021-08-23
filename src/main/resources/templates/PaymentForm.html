@@ -2,31 +2,29 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Pockets kinda light</title>
-    <div class="tenor-gif-embed" data-postid="17035459" data-share-method="host" data-aspect-ratio="1.06312" data-width="15%"><a href="https://tenor.com/view/uhhhh-steve-buscemi-uhm-stare-confused-gif-17035459">Uhhhh Steve Buscemi GIF</a>from <a href="https://tenor.com/search/uhhhh-gifs">Uhhhh GIFs</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+    <title>CheckOut</title>
 </head>
 <body>
-    <form action="#" th:action="@{/}" th:object="${paymentForm}" method="post">
-        <label>Card Number </label>
-        <input type="number" name="cardNumber" value="" th:value="${this.cardNumber}" />
+<div class="row">
+    <div class="col-lg-6 mx-auto">
 
-        <div></div>
-
-        <label>Name on Card</label>
-        <input type="text" name="cardName" value="" th:value="${this.cardName}" />
-
-        <div></div>
-
-        <label>Card Expiry Date </label>
-        <input type="text" name="expDate" value="" th:value="${this.expDate}"  />
-
-        <div></div>
-
-        <label>Security Code </label>
-        <input type="number" name="securityCode" value="" th:value="${this.securityCode}"  />
-
-        <div></div>
-        <button type="submit">Submit</button>
+        <div class="outer-card">
+            <div class="forms">
+                <div class="checkOut">
+                    <div class="checkOut"><span>Email</span><input size="32"></div>
+                <div class="checkOut"> <span>Card Number</span> <input  size="19"> </div>
+                <div class="checkOut"> <span>Name on card</span> <input placeholder="Joe Deez"> </div>
+                <div class="line">
+                    <div class="checkOut"> <span>Expiry Date</span> <input placeholder="mm/yyyy" > </div>
+                    <div class="checkOut"> <span>CVV</span> <input size="3"> </div>
+                </div>
+                <input type="submit">  </input>
+            </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
     </form>
 </body>
 </html>
