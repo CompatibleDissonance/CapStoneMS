@@ -18,9 +18,9 @@ With the ease of access to music production software a lot of musicians can have
 ---------------------------------------------------------------
 
 **Features:**
-1. User is greeted and shown a display of songs.
+1.shown a display of songs.
 
-2. User can input into command line for the song they want and decide if they want to proceed to checkout or choose a different song.
+2. user can select the song(s) they want and decide if they want to proceed to checkout or choose a different song/remove a song.
 
 3. User is greeted with the checkout screen that requires the input of their email for delivery of product and a mock card payment input for payment. 
 
